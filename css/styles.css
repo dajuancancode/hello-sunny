@@ -1,0 +1,218 @@
+/****************
+    General
+****************/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 0 1px 0 #ccc,
+           0 2px 0 #c9c9c9;
+    margin-bottom: auto;
+}
+
+p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/****************
+    Jumbotron
+****************/
+
+.main-header{
+    background: linear-gradient(#5ADBFF, transparent 90%),
+                linear-gradient(0deg, #fff, transparent),
+                url('../img/atlantic.jpg') center center no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    text-transform: capitalize;
+    font-size: 1.625rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+
+
+.callout {
+    display: inline-block;
+    background-color: #89f7fe;  
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+    margin: 15px 0;
+    border-radius: 5px;
+    transition-duration: 500ms;
+}
+
+.callout:hover{
+    background: #7CDFE5;
+}
+
+
+/****************
+    Spotlight
+****************/
+
+
+.spotlight-video {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.video{
+    flex: 400;
+}
+
+.spotlight {
+    flex: 200;
+    line-height: 1.5;
+    padding: 15px 20px;
+}
+
+.spotlight p {
+    font-size: 1.25rem;
+}
+
+.spotlight .callout{
+    display: block;
+    max-width: 75%;
+   margin: 0 auto;
+}
+
+/****************
+    Attractions
+****************/
+
+.attractions-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.attraction{
+    flex-basis: 400px;
+}
+
+
+.attraction-img img {
+    max-width: 100%;
+}
+
+.attraction-img {
+    position: relative;
+	line-height: 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+.attraction-text {
+    line-height: 1.5;
+	opacity: 0;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: rgba(0,0,0, .65);
+	transition-property: opacity;
+	transition-duration: .5s;
+}
+
+.attraction-text:hover{
+    opacity: 1;
+}
+
+/****************
+    Footer
+****************/
+
+.main-footer{
+    background-color: seashell;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+
+.fa{
+    color: black;
+    font-size: 1.313rem;
+    
+}
+
+.social .fa {
+    padding: 0 5px;
+}
+
+@media (max-width: 992px) {
+
+    .video {
+        width: 100%;
+    }
+
+    .title {
+        border: none;
+        font-size: 1.35rem;
+    }
+
+    
+    .spotlight-video{
+        flex-direction: column;
+    }
+    
+    .spotlight {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    attractions-grid {
+        justify-content: space-around;
+    }
+}
